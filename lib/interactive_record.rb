@@ -16,7 +16,7 @@ class InteractiveRecord
       column_names << column["name"]
     end
     
-    column_names.compact
+    return column_names.compact
   end
   
   def initialize(options={})
@@ -30,7 +30,7 @@ class InteractiveRecord
   end
   
   def col_names_for_insert
-    
+    return self.
   end
   
 end
