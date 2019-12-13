@@ -26,7 +26,7 @@ class InteractiveRecord
   end
   
   def table_name_for_insert
-    return table_name
+    return self.table_name
   end
   
 end
