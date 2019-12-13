@@ -59,6 +59,7 @@ class InteractiveRecord
     end.first
     
     sql = "SELECT * FROM #{self.table_name} WHERE #{parameters[0]};"
+    binding.pry
     DB[:conn].execute(sql)
   end
   
