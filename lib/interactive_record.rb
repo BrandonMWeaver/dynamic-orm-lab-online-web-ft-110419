@@ -9,7 +9,7 @@ class InteractiveRecord
   
   def self.column_names
     sql = <<-SQL
-      
+      PRAGMA
   end
   
 end
