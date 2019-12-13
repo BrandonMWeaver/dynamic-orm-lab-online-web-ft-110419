@@ -59,7 +59,7 @@ class InteractiveRecord
       "#{key.to_s} = #{value}"
     end.first
     
-    sql = "SELECT * FROM #{self.table_name} WHERE #{parameters[0]};"
+    sql = "SELECT * FROM #{self.table_name} WHERE #{parameters};"
     binding.pry
     DB[:conn].execute(sql)
   end
