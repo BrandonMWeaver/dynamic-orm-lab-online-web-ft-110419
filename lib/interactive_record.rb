@@ -56,10 +56,10 @@ class InteractiveRecord
   
   def self.find_by(attribute)
     parameter = attribute.map do |key, value|
-      "#{key.to_s}"
+      "#{key.to_s} = #{value}"
     end.first
     
-    sql = "SELECT * FROM #{self.table_name} WHERE #{parameter} = #{attribute[parameter.to_sym]};"
+    sql = "SELECT * FROM #{self.table_name} WHERE \"#{parameter}\";"
     binding.pry
     DB[:conn].execute(sql)
   end
