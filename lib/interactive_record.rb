@@ -56,7 +56,7 @@ class InteractiveRecord
   
   def self.find_by(attribute)
     parameter = attribute.map do |key, value|
-      "#{key.to_s} = #{value}"
+      "#{key.to_s} = '#{value}'"
     end.first
     
     sql = "SELECT * FROM #{self.table_name} WHERE \"#{parameter}\";"
