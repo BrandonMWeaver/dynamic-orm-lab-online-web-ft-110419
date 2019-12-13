@@ -19,12 +19,6 @@ class InteractiveRecord
     column_names.compact
   end
   
-  def self.attr_accessor
-    column_names.each do |column_name|
-      attr_accessor column_name.to_sym
-    end
-  end
-  
   def initialize(options={})
     options.each do |key, value|
       self.send("#{key}=", value)
