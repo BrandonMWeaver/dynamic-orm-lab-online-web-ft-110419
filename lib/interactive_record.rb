@@ -1,6 +1,5 @@
 require_relative "../config/environment.rb"
 require 'active_support/inflector'
-require "pry"
 
 class InteractiveRecord
   
@@ -60,7 +59,6 @@ class InteractiveRecord
     end.first
     
     sql = "SELECT * FROM #{self.table_name} WHERE #{parameter};"
-    binding.pry
     DB[:conn].execute(sql)
   end
   
