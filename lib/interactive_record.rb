@@ -54,7 +54,12 @@ class InteractiveRecord
   end
   
   def self.find_by(attribute)
+    parameters = attribute.map do |key, value|
+      "#{key.to_s} = #{value}"
+    end.first
     
+    sql = "SELECT * FROM #{self.table_name} WHERE #{parameters[0]};"
+    DB[:conn].execute(sql)
   end
   
 end
