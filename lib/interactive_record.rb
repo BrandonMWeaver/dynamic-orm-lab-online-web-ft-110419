@@ -42,4 +42,8 @@ class InteractiveRecord
     return values.join(", ")
   end
   
+  def save
+    
+  end
+  
 end
