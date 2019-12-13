@@ -8,7 +8,8 @@ class InteractiveRecord
   end
   
   def self.column_names
-    
+    sql = <<-SQL
+      
   end
   
 end
